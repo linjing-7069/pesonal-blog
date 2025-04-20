@@ -1,1 +1,128 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 导航栏 */
+nav {
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* 主要内容容器 */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* 各部分通用样式 */
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 个人简介 */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 2rem;
+    shape-outside: circle();
+}
+
+/* 爱好部分 */
+.hobby-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby-card {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.hobby-card i {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* 研究方向 */
+.research-item {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hobby-container {
+        flex-direction: column;
+    }
+    
+    .hobby-card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .avatar {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+}
