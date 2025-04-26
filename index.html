@@ -6,6 +6,7 @@
     <title>个人博客</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./click.js" defer></script>
 </head>
 <body>
     <nav>
@@ -62,27 +63,5 @@
             </div>
         </section>
     </div>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // 初始显示about
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
-        });
-        document.getElementById('about').classList.add('active');
-
-        // 导航点击事件
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                document.querySelectorAll('.section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-    });
-    </script>
 </body>
 </html>
